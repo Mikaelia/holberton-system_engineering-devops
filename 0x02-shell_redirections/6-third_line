@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -b fake | grep 3 fake
+cat -b iacta | grep 3 fake
