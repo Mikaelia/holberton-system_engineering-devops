@@ -1,4 +1,5 @@
 # 0x02. Shell, I/O Redirections and filters
+***
 An introductory project on:
 #### Shell, I/O Redirection
 * How to redirect standard output to a file
