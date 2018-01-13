@@ -1,14 +1,14 @@
 # 0x02. Shell, I/O Redirections and filters
 An introductory project on:
-- Shell, I/O Redirection
+#### Shell, I/O Redirection
 * How to redirect standard output to a file
 * How to get standard input from a file instead of the keyboard
 * How to send the output from one program to the input of another program
 * How to combine commands and filters with redirections
-- Special Characters
+#### Special Characters
 * What are special characters
 * Understand what do the white spaces, single quotes, double quotes, backslash, comment, pipe, command separator, tilde and how and when to use them
-- Other man pages
+#### Other man pages
 * How to display a line of text
 * How to concatenate files and print on the standard output
 * How to reverse a string
