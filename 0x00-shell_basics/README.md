@@ -1,4 +1,4 @@
-#0x00. Shell, basics
+# 0x00. Shell, basics
   
 An introductory project on:
 #### Shell Navigation
