@@ -1,2 +1,2 @@
 #!/bin/bash
-cat -b iacta | grep 3 fake
+head -n 3 | tail -n 1
