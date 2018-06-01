@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+# This script checks a holbertonschool file
+COUNT=1
+while [ $COUNT -lt 101 ]
+do
+n=$COUNT%5
+o=$COUNT%3
+if [[ 0 -eq "$n + $o" ]]
+then
+	echo "FizzBuzz"
+elif [[ 0 -eq $n ]]
+then
+	echo "Buzz"
+elif [[ 0 -eq $o ]]
+then
+	echo "Fizz"
+else
+	echo $COUNT
+fi
+	let COUNT=COUNT+1
+done

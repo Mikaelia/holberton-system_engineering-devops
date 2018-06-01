@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script is printing out filenames without numbers
+ls | cut -d "-" -f2

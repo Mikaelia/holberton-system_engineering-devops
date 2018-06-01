@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# This script is displaying "Holberton School" 10 times
+COUNTER=0
+while [  $COUNTER -lt 10 ]; do
+	echo "Holberton School"
+	if [ $COUNTER -eq 8 ]
+	then
+		echo "Hi"
+	fi
+	let COUNTER=COUNTER+1
+done
