@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 # This script is printing out filenames without numbers
-ls | cut -d "-" -f2
+FILES=$(ls -1)
+for i in $FILES
+do
+	echo "$i" | cut -d "-" -f2
+done
