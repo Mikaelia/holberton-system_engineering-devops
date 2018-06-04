@@ -1,0 +1,24 @@
+#!/usr/bin/env bash
+# displays "To infinity and beyond" indefinitely
+exterminate()
+{
+	sudo rm /var/run/holbertonscript.pid
+	exit
+}
+complain()
+{
+	echo "I hate the kill command"
+	exterminate
+}
+trap 'complain' 15
+trap 'echo "Y U no love me?!"' 2
+trap 'exterminate' 3
+
+sudo touch /var/run/holbertonscript.pid
+echo $$ | sudo tee /var/run/holbertonscript.pid > /dev/null
+
+while :
+do
+	echo "To infinity and beyond"
+	sleep 2
+done
