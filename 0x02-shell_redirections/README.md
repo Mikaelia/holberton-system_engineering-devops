@@ -9,18 +9,12 @@ An introductory project on:
 #### Special Characters
 * What are special characters
 * Understand what do the white spaces, single quotes, double quotes, backslash, comment, pipe, command separator, tilde and how and when to use them
-#### Other man pages
-* How to display a line of text
-* How to concatenate files and print on the standard output
-* How to reverse a string
-* How to remove sections from each line of files
-* What is the /etc/passwd file and what is its format
-* What is the /etc/shadow file and what is its format
+
 ## Requirements
 - Allowed editors: emacs
 - All scripts tested on Ubuntu 14.04 LTS
 ## File Descriptions
-### Mandatory
+
 **[0-hello_world](0-hello_world)** - Write a script that prints “Hello, World”, followed by a new line to the standard output.
 
 **[1-confused_smiley](1-confused_smiley)** - Write a script that displays a confused smiley "(Ôo)'.
