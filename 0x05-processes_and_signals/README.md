@@ -22,10 +22,10 @@
 - **[8-beheaded_process](8-beheaded_process)**: Bash script that kills the process `7-highlander`
 - **[100-process_and_pid_file](100-process_and_pid_file)**: Bash script that:
 
-- Creates the file `/var/run/holbertonscript.pid` containing its PID
-- Displays `To infinity and beyond` indefinitely
-- Displays `I hate the kill command` when receiving a SIGTERM signal
-- Displays `Y U no love me?!` when receiving a SIGINT signal
-- Deletes the file `/var/run/holbertonscript.pid` and terminate itself when receiving a SIGQUIT or SIGTERM signal
+	- Creates the file `/var/run/holbertonscript.pid` containing its PID
+	- Displays `To infinity and beyond` indefinitely
+	- Displays `I hate the kill command` when receiving a SIGTERM signal
+	- Displays `Y U no love me?!` when receiving a SIGINT signal
+	- Deletes the file `/var/run/holbertonscript.pid` and terminate itself when receiving a SIGQUIT or SIGTERM signal
 
 - **[101-manage_my_process](101-manage_my_process)**: Very basic init script that manages `manage_my_process`
