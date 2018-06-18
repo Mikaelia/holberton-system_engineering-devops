@@ -10,7 +10,7 @@ This is an introductory project into regular expressions using Oniguruma
 - [2-repetition_token_1.rb](2-repetition_token_1.rb): The regular expression must match:
 	- htn
 	- hbtn
-- [3-repetition_token_2.rb](3-repetition_token_2.rb): The regular expression mustnot match hbn
+- [3-repetition_token_2.rb](3-repetition_token_2.rb): The regular expression must not match hbn
 - [4-repetition_token_3.rb](4-repetition_token_3.rb): The regular expression must not match hbon
 - [5-beginning_and_end.rb](5-beginning_and_end.rb): The regular expression must be exactly matching a string that starts by h ends by n and can have any single character in between
 - [6-phone_number.rb](6-phone_number.rb): The regular expression must match a 10 digit phone number
