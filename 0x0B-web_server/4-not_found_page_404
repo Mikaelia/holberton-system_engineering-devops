@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Configures nginx so /redirect_me is redirecting to another page
+# Configures nginx to contain custom 404 not found page
 
 FILE=/etc/nginx/sites-available/default
 REDIRECT_STRING="location /redirect_me {\n return 301 http://www.facebook.com;\n}\n"
@@ -8,7 +8,10 @@ sudo apt-get -y update
 sudo apt-get -y install nginx
 echo "Holberton School" | sudo tee /usr/share/nginx/html/index.html
 
-sudo service nginx start
+
+sudo touch /usr/share/nginx/html/404.html
+echo -e "Ceci n'est pas une page\n" | sudo tee /usr/share/nginx/html/404.html
 
 sudo sed -i "30i $REDIRECT_STRING" $FILE
+sudo sed -i "43i error_page 404 /404.html" $FILE
 sudo service nginx restart
