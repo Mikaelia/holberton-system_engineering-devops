@@ -13,5 +13,5 @@ sudo touch /usr/share/nginx/html/404.html
 echo -e "Ceci n'est pas une page" | sudo tee /usr/share/nginx/html/404.html
 
 sudo sed -i "30i $REDIRECT_STRING" $FILE
-sudo sed -i "43i error_page 404 /404.html" $FILE
+sudo sed -i "43i error_page 404 /404.html;" $FILE
 sudo service nginx start
