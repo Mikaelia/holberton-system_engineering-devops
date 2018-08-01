@@ -1,0 +1,13 @@
+#!/usr/bin/env bash
+# display information about subdomains
+DNAME="$1"
+SUBDOMAIN="$2"
+if [ -z "$SUBDOMAIN" ]
+then
+	dig "www.$DNAME" | awk -v var="www" 'BEGIN { FS = "\t| " } ; $0~"^"var{print "The subdomain "var" is a "$4" record and points to "$5""}' -
+	dig "lb-01.$DNAME" | awk -v var="lb-01" 'BEGIN { FS = "\t| " } ; $0~"^"var{print "The subdomain "var" is a "$4" record and points to "$5""}' -
+	dig "web-01.$DNAME" | awk -v var="web-01" 'BEGIN { FS = "\t| " } ; $0~"^"var{print "The subdomain "var" is a "$4" record and points to "$5""}' -
+	dig "web-02.$DNAME" | awk -v var="web-02" 'BEGIN { FS = "\t| " } ; $0~"^"var{print "The subdomain "var" is a "$4" record and points to "$5""}' -
+else
+	dig "$SUBDOMAIN.$DNAME" | awk -v var="$SUBDOMAIN" 'BEGIN { FS = "\t| " } ; $0~"^"var{print "The subdomain "var" is a "$4" record and points to "$5""}' -
+fi
