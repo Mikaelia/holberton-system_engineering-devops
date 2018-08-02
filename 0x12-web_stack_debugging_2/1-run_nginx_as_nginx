@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# configures server to run as nginx user
+
+su - nginx
