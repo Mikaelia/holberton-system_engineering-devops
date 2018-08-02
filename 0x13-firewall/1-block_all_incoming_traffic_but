@@ -1,4 +1,4 @@
-sudo ufw allow ssh
-sudo ufw allow www
-sudo ufw allow 443/tcp
+udo ufw allow ssh
+sudo ufw allow https
+sudo ufw allow http
 sudo ufw enable
