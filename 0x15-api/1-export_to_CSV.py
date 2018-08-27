@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Queries external API for user todo task information
+Exports data to csv file
 """
 import csv
 import json
@@ -34,7 +34,8 @@ if __name__ == '__main__':
         print("\t {}".format(task))
 
 with open('{}.csv'.format(user_id), 'w') as csvfile:
-    writer = csv.writer(csvfile, delimiter=',')
+    writer = csv.writer(csvfile, delimiter=',',
+                        quoting=csv.QUOTE_ALL, quotechar='"')
     for task in tasks:
         writer.writerow([user_id, employee, task.get(
             'completed'), task.get('title')])
