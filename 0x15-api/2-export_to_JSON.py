@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Exports data to csv file
+Exports json of all tasks owned by employees
 """
 import csv
 import json
