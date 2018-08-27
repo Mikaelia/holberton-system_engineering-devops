@@ -2,8 +2,8 @@
 """
 Queries external API for user todo task information
 """
-import requests
 import json
+import requests
 import sys
 
 if __name__ == '__main__':
