@@ -17,11 +17,11 @@ if __name__ == '__main__':
                             params={'userId': user_id})
 
     tasks = response.json()
-    employee = user.json()[0].get('name')
+    username = user.json()[0].get('username')
 
     with open('{}.csv'.format(user_id), 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=',',
                             quoting=csv.QUOTE_ALL, quotechar='"')
         for task in tasks:
-            writer.writerow([user_id, employee, task.get(
+            writer.writerow([user_id, username, task.get(
                 'completed'), task.get('title')])
