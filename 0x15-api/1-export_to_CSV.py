@@ -19,7 +19,6 @@ if __name__ == '__main__':
     tasks = response.json()
     employee = user.json()[0].get('name')
 
-
     with open('{}.csv'.format(user_id), 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=',',
                             quoting=csv.QUOTE_ALL, quotechar='"')
