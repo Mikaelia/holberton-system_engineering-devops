@@ -17,10 +17,10 @@ if __name__ == '__main__':
     user_list = users.json()
 
     with open("todo_all_employees.json", 'w') as outfile:
-        task_list = []
         full_dict = {}
 
         for user in user_list:
+            task_list = []
             username = user.get('username')
             user_id = user.get('id')
             for task in tasks:
