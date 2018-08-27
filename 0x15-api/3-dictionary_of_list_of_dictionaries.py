@@ -30,6 +30,6 @@ if __name__ == '__main__':
                         "completed": task.get('completed'),
                         "username": username
                     }
-            task_list.append(task_dict)
+                    task_list.append(task_dict)
             full_dict.update({user_id: task_list})
         json.dump(full_dict, outfile)
