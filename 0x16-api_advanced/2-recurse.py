@@ -10,7 +10,7 @@ import json
 def recurse(subreddit, after='', hot_list=[]):
 
     try:
-        url = 'https://www.reddit.com/r/{}/top/.json'.format(subreddit)
+        url = 'https://api.reddit.com/r/{}/hot'.format(subreddit)
         headers = {
             'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_1)\
             AppleWebKit/537.36 (KHTML, like Gecko)\
@@ -19,20 +19,18 @@ def recurse(subreddit, after='', hot_list=[]):
         }
         payload = {'after': after}
 
-        response = requests.get(
-            url,
-            headers=headers,
-            params=payload,
-            allow_redirects=False).json()
+        response = requests.get(url, headers=headers, params=payload,
+                                allow_redirects=False).json()
 
-        list = response['data']['children']
-        for val in list:
-            hot_list.append(val['data']['title'])
+        posts = response['data']['children']
+        for item in posts:
+            hot_list.append(item['data']['title'])
 
         after = response['data']['after']
         if after is None:
             return hot_list
 
-        return(recurse(subreddit, after, hot_list))
+        return recurse(subreddit, after, hot_list)
+
     except BaseException:
         return None
