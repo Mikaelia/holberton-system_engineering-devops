@@ -4,7 +4,6 @@ Queries the Reddit API and returns the number of subscribers
 for a given subreddit. If not valid subreddit, returns 0
 """
 import requests
-import json
 
 
 def number_of_subscribers(subreddit):
