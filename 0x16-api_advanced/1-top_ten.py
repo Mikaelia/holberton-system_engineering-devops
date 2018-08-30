@@ -4,7 +4,6 @@ Queries the Reddit API and prints the titles of the first 10 hot posts
 listed for a given subreddit.
 """
 import requests
-import json
 
 
 def top_ten(subreddit):
@@ -24,4 +23,4 @@ def top_ten(subreddit):
         for val in list:
             print(val['data']['title'])
     except BaseException:
-        print('None')
+        print(None)
